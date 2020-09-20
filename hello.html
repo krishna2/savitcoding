@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Savit's Test Page</title>
+<style>
+	h1 {
+		font-family: Verdana;
+		font-size: 64px;
+		color: green;
+	}
+	hr {
+		border: solid 2px red;
+	}
+</style>
+<script type="text/javascript">
+	// alert("Welcome to my page!");
+	function do_stuff() {
+		// alert("Hey, you clicked the button! Didn't ya?");
+		var a = document.getElementById("a").value;
+		var b = document.getElementById("b").value;
+		// alert("a = " + a);
+		// alert("b = " + b);
+		var sum = parseInt(a)+ parseInt(b);
+		// alert("sum = " + sum);
+		var c = document.getElementById("c");
+		c.value = sum;
+		return;
+	}
+
+	function calculate_cube_volume() {
+		// alert("you clicked volume");
+		var cube_size = document.getElementById("cube_size").value;
+		var cube_volume = parseInt(cube_size) * parseInt(cube_size) * parseInt(cube_size);
+		var answer_cube_volume = document.getElementById("answer_cube_volume");
+		answer_cube_volume.value = cube_volume;
+		return;
+	}
+</script>
+
+</head>
+
+<h1>Hello, world!</h1>
+
+<h2>Savit's testing ground</h2>
+
+<h3>A smaller sub-title</h3>
+
+This is sentence one.
+This is sentence two in another line.
+But both the above and this line will all show up together.
+Because HTML does not care about breaks in text file.
+<br />
+
+This is a normal sentence.
+<br /><br />
+Because of the "br" tag, there are two blank lines above.
+
+<p>
+	This is a paragraph.
+</p>
+
+<hr />
+
+<h2>Savit's Addition Calculator</h2>
+
+Enter the first value: <input type="text" id="a" size="8" />
+<br />
+Enter the second value: <input type="text" id="b" ="b" size="8" />
+<br />
+<input type="button" value="Compute the sum" onclick="do_stuff();" />
+<br />
+The answer to the sum of the two values is :
+<input type="text" id="c" readonly />
+<br />
+
+<hr />
+
+
+<h2>Savit's Volume Calculator for a Cube</h2>
+
+Enter the size of the cube: <input type="text" id="cube_size" size="8" />
+<br />
+<input type="button" value="Compute the Volume" onclick="calculate_cube_volume();" />
+<br />
+The volume of the cube is :
+<input type="text" id="answer_cube_volume" readonly />
+<br />
+
+<hr />
+
+<p>
+	This is its own another paragraph.
+</p>
+
+<p>
+This is a sentence to show case some cool styling.
+This word is <b>bold</b> and this is in <i>italics</i>.
+</p>
+
+
+</html>
